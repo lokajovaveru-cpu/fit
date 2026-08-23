@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T15:53:41.802774+00:00",
+  "generated_at": "2026-08-23T16:10:45.888567+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -15,7 +15,7 @@
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
       "website": "https://pilates-place.cz/",
-      "lessons_found": 822
+      "lessons_found": 823
     },
     {
       "id": "ystudio",
@@ -80,22 +80,6 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Barre Alena",
-      "class_type": "pilates",
-      "date": "2026-08-23",
-      "start_time": "18:00",
-      "end_time": "18:50",
-      "instructor": "Vítková Pozdě",
-      "capacity_total": 18,
-      "capacity_free": 14,
-      "booking_url": "https://pilates-place.cz/",
-      "source": "isportsystem"
-    },
-    {
-      "studio_id": "pilates-place",
-      "studio_name": "Pilates Place",
-      "city": "Brno",
-      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
       "class_name": "Ranní Pilates",
       "class_type": "pilates",
       "date": "2026-08-23",
@@ -117,9 +101,9 @@
       "date": "2026-08-23",
       "start_time": "8:00",
       "end_time": "8:50",
-      "instructor": "Simona Šafářová",
+      "instructor": "Alena Vítková",
       "capacity_total": 20,
-      "capacity_free": 15,
+      "capacity_free": 16,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -151,7 +135,7 @@
       "end_time": "15:50",
       "instructor": "Romana Sedláčková",
       "capacity_total": 20,
-      "capacity_free": 18,
+      "capacity_free": 19,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -344,6 +328,22 @@
       "instructor": "Silvie Beránková",
       "capacity_total": 20,
       "capacity_free": 12,
+      "booking_url": "https://pilates-place.cz/",
+      "source": "isportsystem"
+    },
+    {
+      "studio_id": "pilates-place",
+      "studio_name": "Pilates Place",
+      "city": "Brno",
+      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
+      "class_name": "Pilates",
+      "class_type": "pilates",
+      "date": "2026-08-23",
+      "start_time": "8:00",
+      "end_time": "8:50",
+      "instructor": "Simona Šafářová",
+      "capacity_total": 20,
+      "capacity_free": 19,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1184,11 +1184,11 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates Adéla Pazderová Dnes zrušeno 19:00–19:50 Večerní Pilates Adéla Pazderová Dnes zrušeno 7:00–7:50 Ranní Pilates",
+      "class_name": "Večerní Pilates Adéla Pazderová Dnes zrušeno 7:00–7:50 Ranní Pilates",
       "class_type": "pilates",
       "date": "2026-08-23",
-      "start_time": "18:00",
-      "end_time": "18:50",
+      "start_time": "19:00",
+      "end_time": "19:50",
       "instructor": "Klaudie Břeňová",
       "capacity_total": 18,
       "capacity_free": 15,
@@ -1223,7 +1223,7 @@
       "end_time": "10:50",
       "instructor": "Hana Abrahamová",
       "capacity_total": 18,
-      "capacity_free": 14,
+      "capacity_free": 13,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1287,7 +1287,7 @@
       "end_time": "17:50",
       "instructor": "Alena Vítková",
       "capacity_total": 17,
-      "capacity_free": 10,
+      "capacity_free": 9,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1639,7 +1639,7 @@
       "end_time": "18:20",
       "instructor": "Simona Šafářová",
       "capacity_total": 20,
-      "capacity_free": 11,
+      "capacity_free": 9,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1701,9 +1701,9 @@
       "date": "2026-08-24",
       "start_time": "8:00",
       "end_time": "8:50",
-      "instructor": "Simona Šafářová",
+      "instructor": "Alena Vítková",
       "capacity_total": 20,
-      "capacity_free": 15,
+      "capacity_free": 16,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1735,7 +1735,7 @@
       "end_time": "15:50",
       "instructor": "Romana Sedláčková",
       "capacity_total": 20,
-      "capacity_free": 18,
+      "capacity_free": 19,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1928,6 +1928,22 @@
       "instructor": "Silvie Beránková",
       "capacity_total": 20,
       "capacity_free": 12,
+      "booking_url": "https://pilates-place.cz/",
+      "source": "isportsystem"
+    },
+    {
+      "studio_id": "pilates-place",
+      "studio_name": "Pilates Place",
+      "city": "Brno",
+      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
+      "class_name": "Pilates",
+      "class_type": "pilates",
+      "date": "2026-08-24",
+      "start_time": "8:00",
+      "end_time": "8:50",
+      "instructor": "Simona Šafářová",
+      "capacity_total": 20,
+      "capacity_free": 19,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2919,7 +2935,7 @@
       "end_time": "10:50",
       "instructor": "Hana Abrahamová",
       "capacity_total": 18,
-      "capacity_free": 14,
+      "capacity_free": 13,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2983,7 +2999,7 @@
       "end_time": "17:50",
       "instructor": "Alena Vítková",
       "capacity_total": 17,
-      "capacity_free": 10,
+      "capacity_free": 9,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3575,7 +3591,7 @@
       "end_time": "18:20",
       "instructor": "Simona Šafářová",
       "capacity_total": 20,
-      "capacity_free": 11,
+      "capacity_free": 9,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -5591,7 +5607,7 @@
       "end_time": "18:20",
       "instructor": "Simona Šafářová",
       "capacity_total": 20,
-      "capacity_free": 11,
+      "capacity_free": 9,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },

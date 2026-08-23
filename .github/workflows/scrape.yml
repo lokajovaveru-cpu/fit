@@ -10,7 +10,6 @@ on:
   push:
     branches:
       - main
-      - claude/fitness-lessons-aggregator-70qnsh
     paths:
       - "scrapers/**"
       - ".github/workflows/scrape.yml"

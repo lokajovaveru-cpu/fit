@@ -36,19 +36,23 @@ V první verzi je pokrytá jedna sdílená rezervační platforma — **iSportSy
 - Yoga Place
 - Jóga v Brně
 
+Ověřeno živě přes GitHub Actions (viz historie commitů „Aktualizace rozvrhu
+lekcí"): scraper reálně stahuje a parsuje rozvrh, aktuálně např. 1135 lekcí
+napříč 4 z 5 studií za 7 dní dopředu (páté, Jóga v Brně, mělo v momentě
+testování prázdný rozvrh — buď mezi lekcemi, nebo publikuje rozvrh jinak;
+stojí za občasnou kontrolu). Známé drobné nepřesnosti parsování (týkají se
+řádově jednotek procent lekcí):
+
+- Jméno instruktora se odhaduje jako poslední dvě slova textu lekce (běžný
+  vzor „Jméno Příjmení"). Pokud studio uvádí instruktora jen křestním jménem
+  (děje se u Y Studia), jméno zůstane součástí `class_name` místo
+  `instructor` — lekce se tím neztratí, jen je popisek méně čistý.
+- Ojediněle se do jména instruktora dostane doplňkový štítek z webu (např.
+  „Pozdě" u lekcí s pozdní uzávěrkou přihlášek) místo skutečného příjmení.
+
 Studia s vlastním rezervačním systémem (např. Miss Fit, MyFit, BIG ONE
 FITNESS, AZ Fitness...) zatím pokrytá nejsou — pro každé bude potřeba
 samostatný scraper modul (viz „Přidání dalšího studia" níže).
-
-### Důležité upozornění k `scrapers/isportsystem.py`
-
-Tenhle scraper byl napsaný bez možnosti živého otestování proti reálným
-stránkám (vývojové prostředí, kde vznikl, nemá na tyhle weby přístup). Zjištěný
-vzorec AJAX volání a parsování odpovědi jsou tedy „nejlepší odhad" a **první
-ostrý běh v GitHub Actions je potřeba zkontrolovat** (Actions → poslední běh →
-logy) — pokud `lessons_found` u studií vyjde 0 i po opravě `id_infotab`
-apod., bude potřeba doladit parsování podle skutečné odpovědi serveru (ta se
-loguje jako ukázka v logu běhu).
 
 ## Lokální spuštění
 

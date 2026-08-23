@@ -1,0 +1,54 @@
+name: Aktualizace rozvrhu lekcí
+
+on:
+  schedule:
+    # Každé 2 hodiny. Poznámka: GitHub spouští 'schedule' triggery jen z
+    # výchozí (default) větve repozitáře, takže dokud tenhle branch není
+    # smergovaný do main, poběží scraping jen přes ruční spuštění níže.
+    - cron: "0 */2 * * *"
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+    paths:
+      - "scrapers/**"
+      - ".github/workflows/scrape.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape-lessons
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scrapers/requirements.txt
+
+      - name: Run scrapers
+        run: python scrapers/aggregate.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/lessons.json
+          if git diff --cached --quiet; then
+            echo "Žádná změna dat, nic se necommituje."
+          else
+            git commit -m "Aktualizace rozvrhu lekcí"
+            git push
+          fi

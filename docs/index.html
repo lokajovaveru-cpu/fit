@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brno Fit Rozvrh — přehled volných lekcí</title>
+  <meta name="description" content="Přehled aktuálně volných fitness lekcí (jóga, pilates, jumping a další) napříč studii v Brně na jednom místě." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤸</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Brno Fit Rozvrh</h1>
+      <p class="tagline">Volné lekce jógy, pilates, jumpingu a dalšího napříč brněnskými studii — na jednom místě.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="filters" aria-label="Filtry">
+      <div class="filter-group" id="type-filters" role="group" aria-label="Typ lekce"></div>
+
+      <div class="filter-row">
+        <label class="filter-select">
+          Studio
+          <select id="studio-filter">
+            <option value="">Všechna studia</option>
+          </select>
+        </label>
+
+        <label class="filter-select">
+          Den
+          <select id="day-filter">
+            <option value="">Všechny dny</option>
+          </select>
+        </label>
+
+        <label class="filter-checkbox">
+          <input type="checkbox" id="free-only-filter" />
+          Jen s volnými místy
+        </label>
+      </div>
+    </section>
+
+    <p class="result-count" id="result-count" aria-live="polite"></p>
+
+    <section id="lessons-grid" class="lessons-grid"></section>
+
+    <p class="empty-state" id="empty-state" hidden></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        Data jsou sesbíraná z veřejně dostupných rozvrhů jednotlivých studií a slouží jen
+        jako přehled — rezervace vždy proběhne přímo na webu daného studia přes odkaz
+        „Rezervovat“.
+      </p>
+      <p id="generated-at"></p>
+      <p><a href="https://github.com/lokajovaveru-cpu/fit" target="_blank" rel="noopener">Zdrojový kód na GitHubu</a></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "_comment": "Konfigurace studií pro agregátor. Každé studio má 'platform', podle které aggregate.py vybere scraper modul. Pro přidání dalšího studia na iSportSystem staci pridat novy zaznam se spravnou subdomenou.",
+  "studios": [
+    {
+      "id": "rehabfit",
+      "name": "REHABFIT",
+      "city": "Brno",
+      "address": "Kamechy 55, Brno-Bystrc",
+      "platform": "isportsystem",
+      "subdomain": "rehabfit",
+      "website": "https://www.rehabfit.cz/",
+      "notes": "Sportovní a rehabilitační centrum - funkční trénink, rehabilitační cvičení, případně jóga/pilates dle rozvrhu."
+    },
+    {
+      "id": "pilates-place",
+      "name": "Pilates Place",
+      "city": "Brno",
+      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
+      "platform": "isportsystem",
+      "subdomain": "pilates-place",
+      "website": "https://pilates-place.cz/",
+      "notes": "Pilates, barre, pilates reformer."
+    },
+    {
+      "id": "ystudio",
+      "name": "Y Studio",
+      "city": "Brno",
+      "address": "Komárovská 13, Brno-Komárov",
+      "platform": "isportsystem",
+      "subdomain": "ystudio",
+      "website": "https://ystudio.isportsystem.cz/",
+      "notes": "Jóga, barre, pilates."
+    },
+    {
+      "id": "yoga-place",
+      "name": "Yoga Place",
+      "city": "Brno",
+      "address": "Purkyňova 8, Brno",
+      "platform": "isportsystem",
+      "subdomain": "yoga-place",
+      "website": "https://yoga-place.cz/",
+      "notes": "Různé styly jógy (Ashtanga, Hatha, Kundalini, Vinyasa...), i pilates."
+    },
+    {
+      "id": "jogavbrne",
+      "name": "Jóga v Brně",
+      "city": "Brno",
+      "address": "Brno (přesná adresa k doplnění)",
+      "platform": "isportsystem",
+      "subdomain": "jogavbrne",
+      "website": "https://jogavbrne.cz/",
+      "notes": "Jóga studio. Adresu je potřeba dohledat/ověřit před zveřejněním."
+    }
+  ]
+}

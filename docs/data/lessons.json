@@ -1,0 +1,46 @@
+{
+  "generated_at": null,
+  "studios": [
+    {
+      "id": "rehabfit",
+      "name": "REHABFIT",
+      "city": "Brno",
+      "address": "Kamechy 55, Brno-Bystrc",
+      "website": "https://www.rehabfit.cz/",
+      "lessons_found": 0
+    },
+    {
+      "id": "pilates-place",
+      "name": "Pilates Place",
+      "city": "Brno",
+      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
+      "website": "https://pilates-place.cz/",
+      "lessons_found": 0
+    },
+    {
+      "id": "ystudio",
+      "name": "Y Studio",
+      "city": "Brno",
+      "address": "Komárovská 13, Brno-Komárov",
+      "website": "https://ystudio.isportsystem.cz/",
+      "lessons_found": 0
+    },
+    {
+      "id": "yoga-place",
+      "name": "Yoga Place",
+      "city": "Brno",
+      "address": "Purkyňova 8, Brno",
+      "website": "https://yoga-place.cz/",
+      "lessons_found": 0
+    },
+    {
+      "id": "jogavbrne",
+      "name": "Jóga v Brně",
+      "city": "Brno",
+      "address": "Brno (přesná adresa k doplnění)",
+      "website": "https://jogavbrne.cz/",
+      "lessons_found": 0
+    }
+  ],
+  "lessons": []
+}

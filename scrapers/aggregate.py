@@ -26,6 +26,21 @@ SCRAPERS = {
 }
 
 
+def _dedupe(lessons: list[dict]) -> list[dict]:
+    """Some studios have multiple id_sport tabs (e.g. separate rooms) that
+    can list the same lesson more than once - drop exact repeats, keeping
+    the first occurrence."""
+    seen = set()
+    out = []
+    for lesson in lessons:
+        key = (lesson["date"], lesson["start_time"], lesson["class_name"], lesson.get("instructor"))
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(lesson)
+    return out
+
+
 def main() -> int:
     logging.basicConfig(
         level=logging.INFO,
@@ -53,6 +68,7 @@ def main() -> int:
             had_error = True
             lessons = []
 
+        lessons = _dedupe(lessons)
         all_lessons.extend(lessons)
         studio_summaries.append(
             {

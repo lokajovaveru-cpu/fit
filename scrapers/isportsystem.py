@@ -90,7 +90,9 @@ def _robots_allowed(base_url: str, path: str) -> bool:
 def _guess_class_type(class_name: str) -> str:
     lowered = class_name.lower()
     for tag, keywords in CLASS_TYPE_KEYWORDS:
-        if any(kw in lowered for kw in keywords):
+        # \b word-boundary matching, not bare substring - "kolo" must not match
+        # inside e.g. "Sokolovna" (a room name), only as its own word/prefix.
+        if any(re.search(r"\b" + re.escape(kw), lowered) for kw in keywords):
             return tag
     return "ostatní"
 
@@ -158,43 +160,84 @@ def _parse_json_entries(raw: str) -> list[dict[str, Any]]:
     return entries
 
 
-def _parse_html_entries(raw: str) -> list[dict[str, Any]]:
-    soup = BeautifulSoup(raw, "html.parser")
-    entries: list[dict[str, Any]] = []
+_LESSON_TEXT_RE = re.compile(
+    r"(?P<start>\d{1,2}:\d{2})[–-](?P<end>\d{1,2}:\d{2})\s+"
+    r"(?P<middle>.+?)\s+"
+    r"(?P<status>Uplynulo|volno:\s*\d+|Obsazeno:\s*\d+\s*/\s*\d+)"
+)
+_FREE_RE = re.compile(r"volno:\s*(\d+)")
+_OCCUPIED_RE = re.compile(r"Obsazeno:\s*(\d+)\s*/\s*(\d+)")
 
-    candidates = soup.select(
-        "[class*='lekce'], [class*='event'], [class*='item'], [class*='schema'], tr"
-    )
-    for el in candidates:
-        text = el.get_text(" ", strip=True)
-        if not text or len(text) < 3:
+
+def _parse_html_entries(raw: str) -> list[dict[str, Any]]:
+    """Parse the real iSportSystem schedule fragment (confirmed against
+    live responses - there's no public documentation for this format).
+    Flattened to text, each lesson is a
+      'HH:MM-HH:MM <class name> [room] <instructor> <status>'
+    run, where <status> is 'Uplynulo' (slot already passed today - not
+    bookable, skipped), 'volno: N' (N free spots), or 'Obsazeno: X/Y' (X
+    of Y taken). Matching once against the whole flattened text with a
+    single global regex (rather than a CSS selector guess) avoids
+    counting the same lesson more than once from overlapping nested
+    elements, which is what the previous version of this function did.
+
+    The trailing 2 words of the middle blob are taken as the instructor's
+    name - every observed sample was exactly a 2-word Czech name/initial
+    (e.g. "Romana Sedláčková", "Eva N."). This is a heuristic and can be
+    wrong if a class name itself happens to end in two capitalized words."""
+    soup = BeautifulSoup(raw, "html.parser")
+    text = soup.get_text(" ", strip=True)
+
+    entries: list[dict[str, Any]] = []
+    for m in _LESSON_TEXT_RE.finditer(text):
+        status = m.group("status")
+        if status == "Uplynulo":
             continue
-        time_match = re.search(r"\b(\d{1,2}[:.]\d{2})\b", text)
-        if not time_match:
-            continue
-        capacity_match = re.search(r"(\d+)\s*/\s*(\d+)", text)
+
+        middle_words = m.group("middle").split()
+        if len(middle_words) >= 3:
+            instructor = " ".join(middle_words[-2:])
+            class_name = " ".join(middle_words[:-2])
+        else:
+            instructor = None
+            class_name = m.group("middle")
+
+        capacity_free = capacity_total = None
+        free_m = _FREE_RE.match(status)
+        occ_m = _OCCUPIED_RE.match(status)
+        if free_m:
+            capacity_free = int(free_m.group(1))
+        elif occ_m:
+            taken, total = int(occ_m.group(1)), int(occ_m.group(2))
+            capacity_total = total
+            capacity_free = total - taken
+
         entries.append(
             {
-                "_raw_text": text,
-                "_time_match": time_match.group(1).replace(".", ":"),
-                "_capacity_match": capacity_match.groups() if capacity_match else None,
+                "_structured": True,
+                "class_name": class_name,
+                "start_time": m.group("start"),
+                "end_time": m.group("end"),
+                "instructor": instructor,
+                "capacity_free": capacity_free,
+                "capacity_total": capacity_total,
             }
         )
     return entries
 
 
 def _normalize_entry(entry: dict[str, Any], studio: dict[str, str], day: date) -> dict[str, Any]:
-    if "_raw_text" in entry:
-        # Fallback HTML-derived entry - we only confidently know the time and raw text.
-        class_name = entry["_raw_text"][:80]
-        start_time = entry.get("_time_match")
-        cap = entry.get("_capacity_match")
-        capacity_free = int(cap[0]) if cap else None
-        capacity_total = int(cap[1]) if cap else None
-        instructor = None
+    if entry.get("_structured"):
+        class_name = entry["class_name"]
+        start_time = entry["start_time"]
+        end_time = entry["end_time"]
+        instructor = entry["instructor"]
+        capacity_free = entry["capacity_free"]
+        capacity_total = entry["capacity_total"]
     else:
         class_name = str(entry.get("nazev") or entry.get("name") or entry.get("predmet") or entry.get("kurz") or "Lekce")
         start_time = str(entry.get("cas") or entry.get("time") or entry.get("cas_od") or "") or None
+        end_time = None
         instructor = entry.get("lektor") or entry.get("trener") or entry.get("instructor")
         capacity_free = entry.get("volno") or entry.get("volna_mista") or entry.get("free")
         capacity_total = entry.get("kapacita") or entry.get("capacity")
@@ -213,7 +256,7 @@ def _normalize_entry(entry: dict[str, Any], studio: dict[str, str], day: date) -
         "class_type": _guess_class_type(class_name),
         "date": day.isoformat(),
         "start_time": start_time,
-        "end_time": None,
+        "end_time": end_time,
         "instructor": instructor,
         "capacity_total": capacity_total,
         "capacity_free": capacity_free,

@@ -39,10 +39,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r scrapers/requirements.txt
 
-      - name: DEBUG dump (temporary, remove after diagnosis)
-        run: python scrapers/_debug_dump.py
-        continue-on-error: true
-
       - name: Run scrapers
         run: python scrapers/aggregate.py
 

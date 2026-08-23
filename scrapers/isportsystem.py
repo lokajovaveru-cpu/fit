@@ -2,17 +2,19 @@
 Scraper pro studia bezici na rezervacnim systemu iSportSystem
 (napr. rehabfit.isportsystem.cz, pilates-place.isportsystem.cz, ...).
 
-DULEZITA POZNAMKA K TOMUTO SOUBORU:
-Byl napsan bez moznosti zivého otestovani proti realnym strankam
-(vyvojove prostredi nema pristup k techto webum). Presna struktura
-odpovedi ajax endpointu tedy neni jista - kod je proto navrzen
-defenzivne (zkousi vic zpusobu parsovani, nikdy nespadne na jednom
-studiu/dni, a loguje syrova data pro pripad, ze je potreba parsovani
-dolauffovat podle skutecneho vystupu z prvniho behu v GitHub Actions).
+Overeno na zive strance (rehabfit.isportsystem.cz) pres diagnosticky beh
+v GitHub Actions - homepage obsahuje skryty tab s rozvrhem:
 
-Zjisteny vzor ajax volani (nalezeno pres vyhledavani):
+  <a system_tab="" tab_type="activity" default_view="day" id_sport="5"
+     href="#">ROZVRH</a>
+
+'tab_type="activity"' + 'id_sport' je ten spravny (rozvrhovy) tab. Puvodni
+verze tohoto souboru omylem cetla 'id_infotab' z UPLNE JINEHO tabu
+(tab_type="infotab", napr. "Pravidla rezervaci") a posilala ho jako
+id_sport - proto ajax endpoint vracel prazdno. Spravne volani:
+
   https://<subdomena>.isportsystem.cz/ajax/ajax.schema.php
-    ?day=D&month=M&year=Y&id_sport=infoTab&id_infotab=<N>&event=pageLoad
+    ?day=D&month=M&year=Y&id_sport=<cislo z aTab>&event=pageLoad
 """
 
 from __future__ import annotations
@@ -78,38 +80,32 @@ def _guess_class_type(class_name: str) -> str:
     return "ostatní"
 
 
-def _discover_infotab_ids(html: str) -> list[str]:
-    """Look for id_infotab references embedded in the studio's homepage
-    (used by the JS widget to call the ajax endpoint per category/room)."""
-    ids = set(re.findall(r"id_infotab['\"=:\s]+(\d+)", html))
-    return sorted(ids)
+def _discover_activity_sport_ids(html: str) -> list[str]:
+    """Find id_sport values for the real schedule ('ROZVRH') tabs, i.e.
+    <a ... tab_type="activity" ... id_sport="N" ...>. A studio can have more
+    than one such tab (e.g. separate rooms/branches), each needing its own
+    ajax.schema.php call. Deliberately does NOT match tab_type="infotab"
+    tabs (informational content like reservation rules) - those share the
+    same numeric-id-in-an-attribute shape but are a different feature."""
+    ids: list[str] = []
+    for tag_match in re.finditer(r"<a\b[^>]*>", html):
+        tag = tag_match.group(0)
+        if 'tab_type="activity"' not in tag:
+            continue
+        m = re.search(r'id_sport="(\d+)"', tag)
+        if m and m.group(1) not in ids:
+            ids.append(m.group(1))
+    return ids
 
 
-def _ajax_context_snippets(html: str, window: int = 200, limit: int = 5) -> list[str]:
-    """Fallback diagnostic: grab text around each 'ajax' mention in the
-    homepage HTML, in case the real call needs params/headers this scraper
-    doesn't send yet (e.g. a token) - visible in Action logs for a fast
-    follow-up fix without needing another guess-and-check round."""
-    snippets = []
-    for m in re.finditer(r"ajax", html, re.IGNORECASE):
-        start = max(0, m.start() - window)
-        end = min(len(html), m.end() + window)
-        snippets.append(html[start:end].replace("\n", " ").strip())
-        if len(snippets) >= limit:
-            break
-    return snippets
-
-
-def _fetch_day_raw(session: requests.Session, base_url: str, day: date, id_infotab: str | None) -> requests.Response:
+def _fetch_day_raw(session: requests.Session, base_url: str, day: date, id_sport: str) -> requests.Response:
     params = {
         "day": day.day,
         "month": day.month,
         "year": day.year,
-        "id_sport": "infoTab",
+        "id_sport": id_sport,
         "event": "pageLoad",
     }
-    if id_infotab:
-        params["id_infotab"] = id_infotab
 
     url = base_url.rstrip("/") + "/ajax/ajax.schema.php"
     headers = {
@@ -217,18 +213,18 @@ def scrape(studio: dict[str, str]) -> list[dict[str, Any]]:
         log.warning("robots.txt zakazuje /ajax/ pro %s, preskakuji", subdomain)
         return lessons
 
-    id_infotabs: list[str | None] = [None]
     try:
         home = session.get(base_url, timeout=REQUEST_TIMEOUT)
         home.raise_for_status()
-        discovered = _discover_infotab_ids(home.text)
-        if discovered:
-            log.info("%s: nalezeny id_infotab kandidati %s", subdomain, discovered)
-            id_infotabs = discovered
-        for snippet in _ajax_context_snippets(home.text):
-            log.info("%s: kontext kolem 'ajax' na hlavni strance: %s", subdomain, snippet)
+        id_sports = _discover_activity_sport_ids(home.text)
     except requests.RequestException as exc:
-        log.warning("%s: nepodarilo se nacist hlavni stranku (%s), zkousim default ajax volani", subdomain, exc)
+        log.warning("%s: nepodarilo se nacist hlavni stranku (%s), preskakuji", subdomain, exc)
+        return lessons
+
+    if not id_sports:
+        log.warning("%s: na hlavni strance nenalezen zadny tab_type=\"activity\" (ROZVRH) s id_sport, preskakuji", subdomain)
+        return lessons
+    log.info("%s: nalezeny id_sport kandidati (ROZVRH taby) %s", subdomain, id_sports)
 
     time.sleep(REQUEST_DELAY_SECONDS)
 
@@ -236,12 +232,12 @@ def scrape(studio: dict[str, str]) -> list[dict[str, Any]]:
     logged_sample = False
     for offset in range(DAYS_AHEAD):
         day = today + timedelta(days=offset)
-        for id_infotab in id_infotabs:
+        for id_sport in id_sports:
             try:
-                resp = _fetch_day_raw(session, base_url, day, id_infotab)
+                resp = _fetch_day_raw(session, base_url, day, id_sport)
                 raw = resp.text
             except requests.RequestException as exc:
-                log.warning("%s %s (id_infotab=%s): pozadavek selhal (%s)", subdomain, day, id_infotab, exc)
+                log.warning("%s %s (id_sport=%s): pozadavek selhal (%s)", subdomain, day, id_sport, exc)
                 continue
 
             if not logged_sample:
@@ -264,7 +260,7 @@ def scrape(studio: dict[str, str]) -> list[dict[str, Any]]:
                 entries = _parse_html_entries(raw)
 
             if not entries:
-                log.debug("%s %s (id_infotab=%s): zadne rozpoznatelne lekce v odpovedi", subdomain, day, id_infotab)
+                log.debug("%s %s (id_sport=%s): zadne rozpoznatelne lekce v odpovedi", subdomain, day, id_sport)
 
             for entry in entries:
                 lessons.append(_normalize_entry(entry, studio, day))

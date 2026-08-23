@@ -2,19 +2,34 @@
 Scraper pro studia bezici na rezervacnim systemu iSportSystem
 (napr. rehabfit.isportsystem.cz, pilates-place.isportsystem.cz, ...).
 
-Overeno na zive strance (rehabfit.isportsystem.cz) pres diagnosticky beh
-v GitHub Actions - homepage obsahuje skryty tab s rozvrhem:
+Overeno primo ze zdrojoveho JS bundlu dane stranky (funkce loadTab() v
+cache/js/<hash>.js), ktery sestavuje skutecne volani:
 
-  <a system_tab="" tab_type="activity" default_view="day" id_sport="5"
-     href="#">ROZVRH</a>
+  $.ajax({type: "post",
+      url: "ajax/ajax.schema.php",
+      data: {
+          id_sport: id_sport,          // z hidden inputu #id_sport (viz
+                                        // <a tab_type="activity" id_sport="5">ROZVRH</a>)
+          day: $("#day").val(),
+          month: $("#month").val(),
+          year: $("#year").val(),
+          event: event,                // 'init' pri prvnim nacteni stranky
+          timetableWidth: ...,
+          arLabelId: ...,
+          noticeCheckRequested: ...,
+          noticeCheck: ...,
+          idNoticeCheck: ...,
+      },
+      ...
+  });
 
-'tab_type="activity"' + 'id_sport' je ten spravny (rozvrhovy) tab. Puvodni
-verze tohoto souboru omylem cetla 'id_infotab' z UPLNE JINEHO tabu
-(tab_type="infotab", napr. "Pravidla rezervaci") a posilala ho jako
-id_sport - proto ajax endpoint vracel prazdno. Spravne volani:
-
-  https://<subdomena>.isportsystem.cz/ajax/ajax.schema.php
-    ?day=D&month=M&year=Y&id_sport=<cislo z aTab>&event=pageLoad
+Dve veci, ktere predchozi verze tohoto souboru mely spatne (a proto vzdy
+dostavaly status=200 s prazdnym telem, bez ohledu na parametry):
+1. Je to POST, ne GET - PHP skript cte $_POST, takze cokoliv v query
+   stringu je pro nej neviditelne.
+2. 'id_sport' se ma brat z tab_type="activity" tabu (ROZVRH), ne z
+   tab_type="infotab" tabu (ktery je pro neco uplne jineho, napr.
+   "Pravidla rezervaci").
 """
 
 from __future__ import annotations
@@ -99,12 +114,19 @@ def _discover_activity_sport_ids(html: str) -> list[str]:
 
 
 def _fetch_day_raw(session: requests.Session, base_url: str, day: date, id_sport: str) -> requests.Response:
-    params = {
+    # Mirrors the exact jQuery $.ajax(...) call in the site's own JS (loadTab()):
+    # a POST with this form data - not a GET with a query string.
+    form_data = {
+        "id_sport": id_sport,
         "day": day.day,
         "month": day.month,
         "year": day.year,
-        "id_sport": id_sport,
-        "event": "pageLoad",
+        "event": "init",
+        "timetableWidth": 900,
+        "arLabelId": "",
+        "noticeCheckRequested": 0,
+        "noticeCheck": 0,
+        "idNoticeCheck": "",
     }
 
     url = base_url.rstrip("/") + "/ajax/ajax.schema.php"
@@ -112,7 +134,7 @@ def _fetch_day_raw(session: requests.Session, base_url: str, day: date, id_sport
         "X-Requested-With": "XMLHttpRequest",
         "Referer": base_url.rstrip("/") + "/",
     }
-    resp = session.get(url, params=params, headers=headers, timeout=REQUEST_TIMEOUT)
+    resp = session.post(url, data=form_data, headers=headers, timeout=REQUEST_TIMEOUT)
     resp.raise_for_status()
     return resp
 

@@ -85,7 +85,22 @@ def _discover_infotab_ids(html: str) -> list[str]:
     return sorted(ids)
 
 
-def _fetch_day_raw(session: requests.Session, base_url: str, day: date, id_infotab: str | None) -> tuple[str, str]:
+def _ajax_context_snippets(html: str, window: int = 200, limit: int = 5) -> list[str]:
+    """Fallback diagnostic: grab text around each 'ajax' mention in the
+    homepage HTML, in case the real call needs params/headers this scraper
+    doesn't send yet (e.g. a token) - visible in Action logs for a fast
+    follow-up fix without needing another guess-and-check round."""
+    snippets = []
+    for m in re.finditer(r"ajax", html, re.IGNORECASE):
+        start = max(0, m.start() - window)
+        end = min(len(html), m.end() + window)
+        snippets.append(html[start:end].replace("\n", " ").strip())
+        if len(snippets) >= limit:
+            break
+    return snippets
+
+
+def _fetch_day_raw(session: requests.Session, base_url: str, day: date, id_infotab: str | None) -> requests.Response:
     params = {
         "day": day.day,
         "month": day.month,
@@ -97,10 +112,13 @@ def _fetch_day_raw(session: requests.Session, base_url: str, day: date, id_infot
         params["id_infotab"] = id_infotab
 
     url = base_url.rstrip("/") + "/ajax/ajax.schema.php"
-    resp = session.get(url, params=params, timeout=REQUEST_TIMEOUT)
+    headers = {
+        "X-Requested-With": "XMLHttpRequest",
+        "Referer": base_url.rstrip("/") + "/",
+    }
+    resp = session.get(url, params=params, headers=headers, timeout=REQUEST_TIMEOUT)
     resp.raise_for_status()
-    content_type = resp.headers.get("Content-Type", "")
-    return resp.text, content_type
+    return resp
 
 
 def _parse_json_entries(raw: str) -> list[dict[str, Any]]:
@@ -207,6 +225,8 @@ def scrape(studio: dict[str, str]) -> list[dict[str, Any]]:
         if discovered:
             log.info("%s: nalezeny id_infotab kandidati %s", subdomain, discovered)
             id_infotabs = discovered
+        for snippet in _ajax_context_snippets(home.text):
+            log.info("%s: kontext kolem 'ajax' na hlavni strance: %s", subdomain, snippet)
     except requests.RequestException as exc:
         log.warning("%s: nepodarilo se nacist hlavni stranku (%s), zkousim default ajax volani", subdomain, exc)
 
@@ -218,13 +238,23 @@ def scrape(studio: dict[str, str]) -> list[dict[str, Any]]:
         day = today + timedelta(days=offset)
         for id_infotab in id_infotabs:
             try:
-                raw, content_type = _fetch_day_raw(session, base_url, day, id_infotab)
+                resp = _fetch_day_raw(session, base_url, day, id_infotab)
+                raw = resp.text
             except requests.RequestException as exc:
                 log.warning("%s %s (id_infotab=%s): pozadavek selhal (%s)", subdomain, day, id_infotab, exc)
                 continue
 
             if not logged_sample:
-                log.info("%s: ukazka syrove odpovedi (%s): %s", subdomain, content_type, raw[:800])
+                if raw.strip():
+                    log.info(
+                        "%s: ukazka syrove odpovedi status=%s content-type=%s delka=%d: %s",
+                        subdomain, resp.status_code, resp.headers.get("Content-Type", ""), len(raw), raw[:1500],
+                    )
+                else:
+                    log.warning(
+                        "%s: PRAZDNA odpoved status=%s content-type=%s hlavicky=%s",
+                        subdomain, resp.status_code, resp.headers.get("Content-Type", ""), dict(resp.headers),
+                    )
                 logged_sample = True
 
             entries: list[dict[str, Any]] = []

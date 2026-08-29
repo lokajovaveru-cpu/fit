@@ -3,7 +3,8 @@
 > Appka na hledání kamarádů, ne partnerů — a záměrně bez swipe
 > mechaniky Tinderu, která u seznamek působí povrchně a herně
 > ("toxicky"). Dva způsoby, jak najít lidi: **procházení profilů**
-> v okolí (feed, ne kartový swipe) a **nástěnka aktivit**, kde lidé
+> v okolí (jeden profil na obrazovku, žádné binární swipe rozhodování)
+> a **nástěnka aktivit**, kde lidé
 > hledají parťáka na konkrétní věc (posilovna, lezení, výlet,
 > cestování...) a ostatní se k tomu můžou přihlásit.
 
@@ -31,23 +32,25 @@ klíčových obrazovek jsou samostatně (odkaz dostaneš v chatu).
 
 ## 1. Koncept a odlišení od Tinderu/Bumble
 
-Vědomě **bez swipe mechaniky** (kartový stack, rychlé like/pass jedním
-gestem). U seznamek tenhle mechanismus dobře funguje jako hra
-("swipování" je součástí zábavy), ale pro hledání kamarádů působí
-povrchně a nutí hodnotit cizí lidi za sekundu hlavně podle fotky —
-přesně ten dojem appka nemá dělat. Místo toho **procházení profilů
-jako běžný feed** (scroll, žádné mizející karty) a výslovná žádost o
-seznámení ("Poznat se") místo binárního gesta.
+Vědomě **bez binárního swipe rozhodování** (žádné "líbí/nelíbí" gesto
+doprava/doleva jedním pohybem). U seznamek tenhle mechanismus dobře
+funguje jako hra ("swipování" je součástí zábavy), ale pro hledání
+kamarádů působí povrchně a nutí hodnotit cizí lidi za sekundu hlavně
+podle fotky — přesně ten dojem appka nemá dělat. Místo toho **jeden
+profil na obrazovku**: potažení jedním směrem (nahoru) jen posune na
+dalšího člověka — čistě navigační gesto bez hodnotícího významu — a
+zájem o seznámení se vyjadřuje jedním tlačítkem uprostřed karty, ne
+párem "ano/ne" tlačítek.
 
 Nejbližší reálná konkurence je **Bumble BFF** (friend-mode Bumble,
 postavený právě na swipi) a částečně **Meetup** nebo lokální FB skupiny.
 Odlišení téhle aplikace:
 
-- **Žádný swipe** — objevování je feed, ne hra o rychlé rozhodování.
-  Fotka není jediný signál: každá karta v feedu ukazuje i to, co daný
-  člověk **aktuálně hledá** (viz nástěnka aktivit a sekce „Hledám" na
-  profilu níže), takže první dojem je založený na společném zájmu, ne
-  jen na vzhledu.
+- **Žádné binární rozhodování** — jeden profil na obrazovku a jedno
+  tlačítko na vyjádření zájmu, žádný pár "ano/ne" gest. Fotka není
+  jediný signál: karta ukazuje i to, co daný člověk **aktuálně hledá**
+  (viz nástěnka aktivit a sekce „Hledám" na profilu níže), takže první
+  dojem je založený na společném zájmu, ne jen na vzhledu.
 - **Nástěnka aktivit je rovnocenný druhý mód**, ne doplněk. Řeší
   konkrétní, akční potřebu ("hledám parťáka na tuhle věc, tenhle
   týden"), místo abstraktního "najdi si nového kamaráda podle profilu".
@@ -75,28 +78,31 @@ Spodní tab bar, 4 záložky:
 ```
 ┌──────────┬──────────┬──────────┬──────────┐
 │ Objevuj  │ Aktivity │  Zprávy  │  Profil  │
-│  (feed)  │(nástěnka)│  (chat)  │          │
+│ (1 karta)│(nástěnka)│  (chat)  │          │
 └──────────┴──────────┴──────────┴──────────┘
 ```
 
-Obě hlavní cesty (feed i aktivity) vedou do stejného chatu/spojení —
+Obě hlavní cesty (Objevuj i aktivity) vedou do stejného chatu/spojení —
 sjednocený inbox, uživatel neřeší, jestli konverzace vznikla z přijaté
 žádosti o seznámení, nebo z přihlášení na aktivitu.
 
 ## 4. Funkce
 
-### 4.1 Objevuj (feed, ne swipe)
+### 4.1 Objevuj (jeden profil, jedním směrem)
 
-- Svisle scrollovatelný feed profilů v okolí — normální procházení,
-  žádné mizející karty ani gesto pro "odmítnutí". Foto, jméno, věk,
-  vzdálenost, tagy zájmů.
-- Každá karta navíc ukazuje řádek **„Hledá: ..."** — aktuální otevřenou
+- Jeden profil na obrazovku (karta), ne kompaktní seznam. Foto, jméno,
+  věk, vzdálenost, tagy zájmů.
+- Karta navíc ukazuje řádek **„Hledá: ..."** — aktuální otevřenou
   aktivitu dané osoby z nástěnky (např. „Hledá parťáka: Lezení na
   umělé stěně"), pokud nějakou má. Objevování je tak vedené i sdíleným
   zájmem, ne jen fotkou.
-- Tlačítko **„Poznat se"** na kartě pošle danému člověku žádost o
-  seznámení (s možností krátké úvodní zprávy). Žádné explicitní
-  odmítnutí — kdo nemá zájem, prostě neodpoví.
+- Pohyb mezi profily je **jedním směrem** (potažení nahoru = další
+  profil) — čistě navigační gesto bez hodnotícího významu, ne pár gest
+  doprava/doleva jako "líbí/nelíbí".
+- Zájem o seznámení se vyjadřuje **jedním tlačítkem uprostřed karty**
+  (ne párem "ano/ne" tlačítek) — odešle danému člověku žádost o
+  seznámení. Žádné explicitní odmítnutí — kdo nemá zájem, prostě
+  pokračuje dál.
 - Přijetí žádosti → obrazovka **Nové spojení** → tlačítko "Napsat
   zprávu".
 - Filtry: vzdálenost, věkové rozmezí, konkrétní zájmy/kategorie.
@@ -134,7 +140,7 @@ sjednocený inbox, uživatel neřeší, jestli konverzace vznikla z přijaté
   otevřené příspěvky z nástěnky), nebo (b) se k nim jako zájemce
   přihlásil. U každé položky je vidět, jestli ji autor vytvořil, nebo
   se jen přidal, plus kdy/kde se koná. Kdokoli si profil prohlíží (ve
-  feedu i jinde), hned vidí, **kde by se s tímhle člověkem mohl reálně
+  Objevuj i jinde), hned vidí, **kde by se s tímhle člověkem mohl reálně
   potkat** — silnější a konkrétnější signál než jen společné tagy
   zájmů. Vlastníkovi profilu se navíc u sekce zobrazuje počet nových
   žádostí čekajících na schválení k jeho vlastním aktivitám.
@@ -149,8 +155,8 @@ sjednocený inbox, uživatel neřeší, jestli konverzace vznikla z přijaté
 profil (fotky, jméno, věk, bio) → výběr zájmů (tagy) → poloha → krátké
 bezpečnostní pravidla („tahle appka je na kamarádství") → notifikace.
 
-**Feed → žádost → spojení → chat:**
-`Objevuj → karta v feedu (+ vidím "Hledá: ...") → Poznat se (+ zpráva) → čekání na přijetí → druhá strana přijme → Nové spojení → Napsat zprávu → Chat`
+**Objevuj → žádost → spojení → chat:**
+`Objevuj → karta profilu (+ vidím "Hledá: ...") → potažení nahoru = další / tlačítko uprostřed = zájem → čekání na přijetí → druhá strana přijme → Nové spojení → Napsat zprávu → Chat`
 
 **Aktivita → přihlášení → chat:**
 `Aktivity → filtr/hledání → detail aktivity → Mám zájem (+ zpráva) → čekání na schválení → autor schválí v sekci "Hledám" na profilu → Chat (skupinový, pokud víc lidí)`
@@ -268,7 +274,7 @@ jasná, jednosměrná žádost s explicitním přijetím. `CONVERSATION` s
 | Onboarding / registrace | vysvětlení konceptu, registrace, ověření |
 | Vytvoření profilu | fotky, jméno, věk, bio, zájmy |
 | Preference | dosah, věkové rozmezí, kategorie zájmů |
-| Objevuj (feed) | scrollovatelný seznam profilů, u každého „Hledá: ..." |
+| Objevuj | jeden profil na obrazovku, potažení nahoru = další, tlačítko uprostřed = zájem |
 | Nové spojení | potvrzení po přijetí žádosti, CTA „napsat zprávu" |
 | Detail profilu | rozšířené info o druhém uživateli vč. sekce „Hledám" |
 | Nástěnka aktivit | feed příspěvků + filtry |
@@ -328,7 +334,7 @@ Freemium model, jádro appky zdarma:
 
 - **Parta+** (např. 99–149 Kč/měsíc): neomezené žádosti o seznámení,
   vidět, kdo si prohlédl můj profil, zvýraznění vlastní aktivity na
-  nástěnce i vlastního profilu ve feedu ("boost"), pokročilé filtry.
+  nástěnce i vlastního profilu v Objevuj ("boost"), pokročilé filtry.
 - Bez skrytých plateb za základní bezpečnost (nahlášení, blokování) —
   to musí zůstat zdarma vždy.
 
@@ -336,27 +342,27 @@ Freemium model, jádro appky zdarma:
 
 | Fáze | Rozsah |
 |---|---|
-| **MVP** | Profil vč. sekce „Hledám", feed + žádosti o seznámení, základní 1:1 chat, nástěnka aktivit (vytvoření/prohlížení/žádost/schválení), nahlášení a blokování, ruční moderace |
+| **MVP** | Profil vč. sekce „Hledám", Objevuj + žádosti o seznámení, základní 1:1 chat, nástěnka aktivit (vytvoření/prohlížení/žádost/schválení), nahlášení a blokování, ruční moderace |
 | **Fáze 2** | Push notifikace, pokročilé filtry, ověření fotek, skupinové chaty pro aktivity s víc účastníky, „boost" aktivity |
 | **Fáze 3** | Komunity/skupiny podle zájmu, hodnocení po proběhlé aktivitě, automatická moderace fotek, prémiové předplatné |
 
 ## 12. Rizika a otevřené otázky
 
-- **Cold start problem** — feed i nástěnka potřebují kritické množství
+- **Cold start problem** — Objevuj i nástěnka potřebují kritické množství
   aktivních lidí v jedné lokalitě, jinak je appka prázdná. Warto zvážit
   launch nejdřív v jednom městě/komunitě (např. přes existující
   komunity/FB skupiny) místo celé ČR najednou.
 - **Bezpečnost při osobním setkání** — appka může jen doporučovat
   bezpečné chování, ne ho vynutit; stojí za to od začátku promyslet
   proces nahlášení/reakce na incident, ne ho řešit až dodatečně.
-- **Poměr feed vs. aktivity** — jestli mají být rovnocenné, nebo jestli
+- **Poměr Objevuj vs. aktivity** — jestli mají být rovnocenné, nebo jestli
   je jedna z nich hlavní a druhá doplňková, se nejlíp ověří až s
   reálnými uživateli.
-- **Náročnost feedu bez swipe** — bez gamifikace swipe gesta musí feed
-  fungovat i tak, aby se do appky lidé rádi vraceli (kvalitní řazení
-  profilů podle shody zájmů/aktivit, ne jen chronologicky) — případně
-  časem doplnit denní/týdenní "doporučení" místo nekonečného
-  scrollování.
+- **Náročnost objevování bez gamifikace** — bez herního swipe gesta
+  musí pořadí, ve kterém appka lidi nabízí, fungovat samo o sobě, aby
+  se do appky lidé rádi vraceli (kvalitní řazení podle shody
+  zájmů/aktivit, ne jen náhodně) — případně časem doplnit denní/týdenní
+  "doporučení" místo donekonečna dalších profilů.
 
 ## 13. Další kroky
 

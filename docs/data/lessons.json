@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T02:05:06.616355+00:00",
+  "generated_at": "2026-08-29T04:05:20.490513+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -1296,27 +1296,11 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer",
+      "class_name": "Pilates reformer Aneta Hrušková Dnes zrušeno 9:10–10:00 Pilates reformer Aneta Hrušková Jen náhradníci: 0/3 10:20–11:10 Pilates reformer",
       "class_type": "pilates",
       "date": "2026-08-29",
       "start_time": "8:00",
       "end_time": "8:50",
-      "instructor": "Aneta Hrušková",
-      "capacity_total": 6,
-      "capacity_free": 5,
-      "booking_url": "https://pilates-place.cz/",
-      "source": "isportsystem"
-    },
-    {
-      "studio_id": "pilates-place",
-      "studio_name": "Pilates Place",
-      "city": "Brno",
-      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer Aneta Hrušková Jen náhradníci: 0/3 10:20–11:10 Pilates reformer",
-      "class_type": "pilates",
-      "date": "2026-08-29",
-      "start_time": "9:10",
-      "end_time": "10:00",
       "instructor": "Aneta Hrušková",
       "capacity_total": 6,
       "capacity_free": 1,
@@ -1528,6 +1512,22 @@
       "instructor": "Aneta Hrušková",
       "capacity_total": 6,
       "capacity_free": 4,
+      "booking_url": "https://pilates-place.cz/",
+      "source": "isportsystem"
+    },
+    {
+      "studio_id": "pilates-place",
+      "studio_name": "Pilates Place",
+      "city": "Brno",
+      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
+      "class_name": "Pilates reformer",
+      "class_type": "pilates",
+      "date": "2026-08-29",
+      "start_time": "8:00",
+      "end_time": "8:50",
+      "instructor": "Aneta Hrušková",
+      "capacity_total": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T00:06:26.594498+00:00",
+  "generated_at": "2026-08-30T02:05:31.974134+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -679,7 +679,7 @@
       "end_time": "16:50",
       "instructor": "Aneta Ireinová",
       "capacity_total": 20,
-      "capacity_free": 10,
+      "capacity_free": 9,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },

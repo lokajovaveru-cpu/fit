@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T00:12:48.423872+00:00",
+  "generated_at": "2026-09-01T02:08:01.528085+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -4391,7 +4391,7 @@
       "end_time": "11:50",
       "instructor": "Eliška Kudrnová.",
       "capacity_total": 6,
-      "capacity_free": 5,
+      "capacity_free": 4,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -6135,7 +6135,7 @@
       "end_time": "11:50",
       "instructor": "Eliška Kudrnová.",
       "capacity_total": 6,
-      "capacity_free": 5,
+      "capacity_free": 4,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -7783,7 +7783,7 @@
       "end_time": "11:50",
       "instructor": "Eliška Kudrnová.",
       "capacity_total": 6,
-      "capacity_free": 5,
+      "capacity_free": 4,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -13207,7 +13207,7 @@
       "end_time": "17:50",
       "instructor": "Tereza Plachá",
       "capacity_total": 17,
-      "capacity_free": 17,
+      "capacity_free": 16,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },

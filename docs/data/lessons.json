@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T02:14:39.459429+00:00",
+  "generated_at": "2026-09-02T04:08:48.593017+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -15,7 +15,7 @@
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
       "website": "https://pilates-place.cz/",
-      "lessons_found": 801
+      "lessons_found": 800
     },
     {
       "id": "ystudio",
@@ -1095,7 +1095,7 @@
       "end_time": "15:50",
       "instructor": "Aneta Hrušková",
       "capacity_total": 18,
-      "capacity_free": 17,
+      "capacity_free": 16,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2352,27 +2352,11 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer",
+      "class_name": "Pilates reformer Lucie Kučerová. Dnes zrušeno 10:30–11:20 Pilates reformer",
       "class_type": "pilates",
       "date": "2026-09-02",
       "start_time": "9:00",
       "end_time": "9:50",
-      "instructor": "Lucie Kučerová.",
-      "capacity_total": 6,
-      "capacity_free": 6,
-      "booking_url": "https://pilates-place.cz/",
-      "source": "isportsystem"
-    },
-    {
-      "studio_id": "pilates-place",
-      "studio_name": "Pilates Place",
-      "city": "Brno",
-      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer",
-      "class_type": "pilates",
-      "date": "2026-09-02",
-      "start_time": "10:30",
-      "end_time": "11:20",
       "instructor": "Lucie Kučerová.",
       "capacity_total": 6,
       "capacity_free": 3,
@@ -2919,7 +2903,7 @@
       "end_time": "15:50",
       "instructor": "Aneta Hrušková",
       "capacity_total": 18,
-      "capacity_free": 17,
+      "capacity_free": 16,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -4567,7 +4551,7 @@
       "end_time": "15:50",
       "instructor": "Aneta Hrušková",
       "capacity_total": 18,
-      "capacity_free": 17,
+      "capacity_free": 16,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -6183,7 +6167,7 @@
       "end_time": "15:50",
       "instructor": "Aneta Hrušková",
       "capacity_total": 18,
-      "capacity_free": 17,
+      "capacity_free": 16,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -7783,7 +7767,7 @@
       "end_time": "8:50",
       "instructor": "Vendula Vysoudilová.",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -9543,7 +9527,7 @@
       "end_time": "8:50",
       "instructor": "Vendula Vysoudilová.",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -9703,7 +9687,7 @@
       "end_time": "17:20",
       "instructor": "Vendula Vysoudilová.",
       "capacity_total": 6,
-      "capacity_free": 2,
+      "capacity_free": 1,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -11335,7 +11319,7 @@
       "end_time": "8:50",
       "instructor": "Vendula Vysoudilová.",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -11495,7 +11479,7 @@
       "end_time": "17:20",
       "instructor": "Vendula Vysoudilová.",
       "capacity_total": 6,
-      "capacity_free": 2,
+      "capacity_free": 1,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -13271,7 +13255,7 @@
       "end_time": "17:20",
       "instructor": "Vendula Vysoudilová.",
       "capacity_total": 6,
-      "capacity_free": 2,
+      "capacity_free": 1,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },

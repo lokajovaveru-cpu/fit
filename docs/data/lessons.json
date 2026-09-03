@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T00:13:00.507372+00:00",
+  "generated_at": "2026-09-03T02:12:29.014137+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -1575,7 +1575,7 @@
       "end_time": "12:20",
       "instructor": "Aneta Hrušková",
       "capacity_total": 6,
-      "capacity_free": 5,
+      "capacity_free": 3,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },

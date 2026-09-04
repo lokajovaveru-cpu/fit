@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T02:08:38.674154+00:00",
+  "generated_at": "2026-09-04T04:08:57.765964+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -15,7 +15,7 @@
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
       "website": "https://pilates-place.cz/",
-      "lessons_found": 790
+      "lessons_found": 789
     },
     {
       "id": "ystudio",
@@ -31,7 +31,7 @@
       "city": "Brno",
       "address": "Purkyňova 8, Brno",
       "website": "https://yoga-place.cz/",
-      "lessons_found": 258
+      "lessons_found": 257
     },
     {
       "id": "jogavbrne",
@@ -887,7 +887,7 @@
       "end_time": "7:20",
       "instructor": "Aneta Ireinová",
       "capacity_total": 20,
-      "capacity_free": 3,
+      "capacity_free": 2,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -967,7 +967,7 @@
       "end_time": "18:50",
       "instructor": "Bára Hála",
       "capacity_total": 20,
-      "capacity_free": 10,
+      "capacity_free": 9,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -999,7 +999,7 @@
       "end_time": "9:50",
       "instructor": "Silvie Beránková",
       "capacity_total": 20,
-      "capacity_free": 11,
+      "capacity_free": 10,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1047,7 +1047,7 @@
       "end_time": "17:10",
       "instructor": "Aneta Hrušková",
       "capacity_total": 20,
-      "capacity_free": 18,
+      "capacity_free": 19,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2064,27 +2064,11 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates",
+      "class_name": "Pilates Eliška Kudrnová Dnes zrušeno 10:00–10:50 Barrelates",
       "class_type": "pilates",
       "date": "2026-09-04",
       "start_time": "8:30",
       "end_time": "9:20",
-      "instructor": "Eliška Kudrnová",
-      "capacity_total": 18,
-      "capacity_free": 16,
-      "booking_url": "https://pilates-place.cz/",
-      "source": "isportsystem"
-    },
-    {
-      "studio_id": "pilates-place",
-      "studio_name": "Pilates Place",
-      "city": "Brno",
-      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Barrelates",
-      "class_type": "pilates",
-      "date": "2026-09-04",
-      "start_time": "10:00",
-      "end_time": "10:50",
       "instructor": "Hana Abrahamová",
       "capacity_total": 17,
       "capacity_free": 9,
@@ -2535,7 +2519,7 @@
       "end_time": "9:50",
       "instructor": "Silvie Beránková",
       "capacity_total": 20,
-      "capacity_free": 11,
+      "capacity_free": 10,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2583,7 +2567,7 @@
       "end_time": "17:10",
       "instructor": "Aneta Hrušková",
       "capacity_total": 20,
-      "capacity_free": 18,
+      "capacity_free": 19,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -15584,27 +15568,11 @@
       "studio_name": "Yoga Place",
       "city": "Brno",
       "address": "Purkyňova 8, Brno",
-      "class_name": "Fyzio flow jóga",
+      "class_name": "Fyzio flow jóga Aleš Lindovský Dnes zrušeno 15:15–16:15 Aroma hatha jóga",
       "class_type": "jóga",
       "date": "2026-09-04",
       "start_time": "8:15",
       "end_time": "9:15",
-      "instructor": "Aleš Lindovský",
-      "capacity_total": 18,
-      "capacity_free": 16,
-      "booking_url": "https://yoga-place.cz/",
-      "source": "isportsystem"
-    },
-    {
-      "studio_id": "yoga-place",
-      "studio_name": "Yoga Place",
-      "city": "Brno",
-      "address": "Purkyňova 8, Brno",
-      "class_name": "Aroma hatha jóga",
-      "class_type": "jóga",
-      "date": "2026-09-04",
-      "start_time": "15:15",
-      "end_time": "16:15",
       "instructor": "Pavlína Bublová",
       "capacity_total": 18,
       "capacity_free": 18,

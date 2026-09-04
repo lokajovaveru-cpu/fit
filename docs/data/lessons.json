@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T18:09:57.865332+00:00",
+  "generated_at": "2026-09-04T20:08:27.720612+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -999,7 +999,7 @@
       "end_time": "18:50",
       "instructor": "Karolína Chmelová",
       "capacity_total": 18,
-      "capacity_free": 15,
+      "capacity_free": 14,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1111,7 +1111,7 @@
       "end_time": "17:50",
       "instructor": "Karolína Beranová",
       "capacity_total": 18,
-      "capacity_free": 12,
+      "capacity_free": 11,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1511,7 +1511,7 @@
       "end_time": "18:20",
       "instructor": "Tereza Jahodová",
       "capacity_total": 6,
-      "capacity_free": 5,
+      "capacity_free": 4,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1895,7 +1895,7 @@
       "end_time": "8:50",
       "instructor": "Adéla Pazderová",
       "capacity_total": 18,
-      "capacity_free": 16,
+      "capacity_free": 18,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1911,7 +1911,7 @@
       "end_time": "9:50",
       "instructor": "Simona Šafářová",
       "capacity_total": 17,
-      "capacity_free": 11,
+      "capacity_free": 10,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1927,7 +1927,7 @@
       "end_time": "11:20",
       "instructor": "Adéla Žáková",
       "capacity_total": 18,
-      "capacity_free": 9,
+      "capacity_free": 8,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1943,7 +1943,7 @@
       "end_time": "12:20",
       "instructor": "Karolína Chmelová",
       "capacity_total": 17,
-      "capacity_free": 16,
+      "capacity_free": 15,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2007,7 +2007,7 @@
       "end_time": "18:50",
       "instructor": "Eliška Kudrnová",
       "capacity_total": 18,
-      "capacity_free": 17,
+      "capacity_free": 16,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2039,7 +2039,7 @@
       "end_time": "9:50",
       "instructor": "Adéla Pazderová.",
       "capacity_total": 6,
-      "capacity_free": 3,
+      "capacity_free": 1,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2055,7 +2055,7 @@
       "end_time": "11:20",
       "instructor": "Simona Šafářová.",
       "capacity_total": 6,
-      "capacity_free": 3,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2295,7 +2295,7 @@
       "end_time": "18:50",
       "instructor": "Karolína Chmelová",
       "capacity_total": 18,
-      "capacity_free": 15,
+      "capacity_free": 14,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2407,7 +2407,7 @@
       "end_time": "17:50",
       "instructor": "Karolína Beranová",
       "capacity_total": 18,
-      "capacity_free": 12,
+      "capacity_free": 11,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2807,7 +2807,7 @@
       "end_time": "18:50",
       "instructor": "Silvie Beránková",
       "capacity_total": 20,
-      "capacity_free": 19,
+      "capacity_free": 18,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2887,7 +2887,7 @@
       "end_time": "18:20",
       "instructor": "Tereza Jahodová",
       "capacity_total": 6,
-      "capacity_free": 5,
+      "capacity_free": 4,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3335,7 +3335,7 @@
       "end_time": "8:50",
       "instructor": "Adéla Pazderová",
       "capacity_total": 18,
-      "capacity_free": 16,
+      "capacity_free": 18,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3351,7 +3351,7 @@
       "end_time": "9:50",
       "instructor": "Simona Šafářová",
       "capacity_total": 17,
-      "capacity_free": 11,
+      "capacity_free": 10,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3367,7 +3367,7 @@
       "end_time": "11:20",
       "instructor": "Adéla Žáková",
       "capacity_total": 18,
-      "capacity_free": 9,
+      "capacity_free": 8,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3383,7 +3383,7 @@
       "end_time": "12:20",
       "instructor": "Karolína Chmelová",
       "capacity_total": 17,
-      "capacity_free": 16,
+      "capacity_free": 15,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3447,7 +3447,7 @@
       "end_time": "18:50",
       "instructor": "Eliška Kudrnová",
       "capacity_total": 18,
-      "capacity_free": 17,
+      "capacity_free": 16,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3623,7 +3623,7 @@
       "end_time": "9:50",
       "instructor": "Adéla Pazderová.",
       "capacity_total": 6,
-      "capacity_free": 3,
+      "capacity_free": 1,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3639,7 +3639,7 @@
       "end_time": "11:20",
       "instructor": "Simona Šafářová.",
       "capacity_total": 6,
-      "capacity_free": 3,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3911,7 +3911,7 @@
       "end_time": "18:50",
       "instructor": "Karolína Chmelová",
       "capacity_total": 18,
-      "capacity_free": 15,
+      "capacity_free": 14,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -4023,7 +4023,7 @@
       "end_time": "17:50",
       "instructor": "Karolína Beranová",
       "capacity_total": 18,
-      "capacity_free": 12,
+      "capacity_free": 11,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -4423,7 +4423,7 @@
       "end_time": "18:50",
       "instructor": "Silvie Beránková",
       "capacity_total": 20,
-      "capacity_free": 19,
+      "capacity_free": 18,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -4535,7 +4535,7 @@
       "end_time": "18:20",
       "instructor": "Tereza Jahodová",
       "capacity_total": 6,
-      "capacity_free": 5,
+      "capacity_free": 4,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -5063,7 +5063,7 @@
       "end_time": "18:50",
       "instructor": "Eliška Kudrnová",
       "capacity_total": 18,
-      "capacity_free": 17,
+      "capacity_free": 16,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -5703,7 +5703,7 @@
       "end_time": "17:50",
       "instructor": "Karolína Beranová",
       "capacity_total": 18,
-      "capacity_free": 12,
+      "capacity_free": 11,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -6103,7 +6103,7 @@
       "end_time": "18:50",
       "instructor": "Silvie Beránková",
       "capacity_total": 20,
-      "capacity_free": 19,
+      "capacity_free": 18,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -6743,7 +6743,7 @@
       "end_time": "11:10",
       "instructor": "Silvie Beránková",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -7895,7 +7895,7 @@
       "end_time": "18:50",
       "instructor": "Silvie Beránková",
       "capacity_total": 20,
-      "capacity_free": 19,
+      "capacity_free": 18,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -8551,7 +8551,7 @@
       "end_time": "11:10",
       "instructor": "Silvie Beránková",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -9671,7 +9671,7 @@
       "end_time": "18:50",
       "instructor": "Silvie Beránková",
       "capacity_total": 20,
-      "capacity_free": 19,
+      "capacity_free": 18,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -10343,7 +10343,7 @@
       "end_time": "11:10",
       "instructor": "Silvie Beránková",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -11511,7 +11511,7 @@
       "end_time": "18:50",
       "instructor": "Silvie Beránková",
       "capacity_total": 20,
-      "capacity_free": 19,
+      "capacity_free": 18,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -12199,7 +12199,7 @@
       "end_time": "11:10",
       "instructor": "Silvie Beránková",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -17527,7 +17527,7 @@
       "end_time": "17:20",
       "instructor": "Lucie Kučerová",
       "capacity_total": 18,
-      "capacity_free": 15,
+      "capacity_free": 14,
       "booking_url": "https://yoga-place.cz/",
       "source": "isportsystem"
     },
@@ -18007,7 +18007,7 @@
       "end_time": "17:20",
       "instructor": "Lucie Kučerová",
       "capacity_total": 18,
-      "capacity_free": 15,
+      "capacity_free": 14,
       "booking_url": "https://yoga-place.cz/",
       "source": "isportsystem"
     },
@@ -18535,7 +18535,7 @@
       "end_time": "17:20",
       "instructor": "Lucie Kučerová",
       "capacity_total": 18,
-      "capacity_free": 15,
+      "capacity_free": 14,
       "booking_url": "https://yoga-place.cz/",
       "source": "isportsystem"
     },

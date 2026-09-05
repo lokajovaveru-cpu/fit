@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T04:08:23.308784+00:00",
+  "generated_at": "2026-09-05T06:10:13.856812+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -15,7 +15,7 @@
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
       "website": "https://pilates-place.cz/",
-      "lessons_found": 788
+      "lessons_found": 787
     },
     {
       "id": "ystudio",
@@ -951,7 +951,7 @@
       "end_time": "11:20",
       "instructor": "Silvie Beránková",
       "capacity_total": 18,
-      "capacity_free": 11,
+      "capacity_free": 10,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -967,7 +967,7 @@
       "end_time": "15:50",
       "instructor": "Aneta Hrušková",
       "capacity_total": 18,
-      "capacity_free": 10,
+      "capacity_free": 8,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -983,7 +983,7 @@
       "end_time": "17:10",
       "instructor": "Aneta Hrušková",
       "capacity_total": 20,
-      "capacity_free": 19,
+      "capacity_free": 18,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1015,7 +1015,7 @@
       "end_time": "11:20",
       "instructor": "Adéla Pazderová",
       "capacity_total": 20,
-      "capacity_free": 13,
+      "capacity_free": 12,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -1600,11 +1600,11 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer Aneta Hrušková Jen náhradníci: 0/3 9:10–10:00 Pilates reformer Aneta Hrušková Jen náhradníci: 0/3 10:20–11:10 Pilates reformer",
+      "class_name": "Pilates reformer Aneta Hrušková Jen náhradníci: 0/3 10:20–11:10 Pilates reformer",
       "class_type": "pilates",
       "date": "2026-09-05",
-      "start_time": "8:00",
-      "end_time": "8:50",
+      "start_time": "9:10",
+      "end_time": "10:00",
       "instructor": "Aneta Hrušková",
       "capacity_total": 6,
       "capacity_free": 4,
@@ -2096,11 +2096,11 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates Adéla Pazderová Dnes zrušeno 9:00–9:50 Barre",
+      "class_name": "Barre",
       "class_type": "pilates",
       "date": "2026-09-05",
-      "start_time": "8:00",
-      "end_time": "8:50",
+      "start_time": "9:00",
+      "end_time": "9:50",
       "instructor": "Simona Šafářová",
       "capacity_total": 17,
       "capacity_free": 11,
@@ -2119,7 +2119,7 @@
       "end_time": "11:20",
       "instructor": "Adéla Žáková",
       "capacity_total": 18,
-      "capacity_free": 5,
+      "capacity_free": 3,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2135,7 +2135,7 @@
       "end_time": "12:20",
       "instructor": "Karolína Chmelová",
       "capacity_total": 17,
-      "capacity_free": 15,
+      "capacity_free": 14,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2384,27 +2384,11 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer",
+      "class_name": "Pilates reformer Simona Šafářová. Dnes zrušeno 16:30–17:20 Pilates reformer",
       "class_type": "pilates",
       "date": "2026-09-05",
       "start_time": "10:30",
       "end_time": "11:20",
-      "instructor": "Simona Šafářová.",
-      "capacity_total": 6,
-      "capacity_free": 5,
-      "booking_url": "https://pilates-place.cz/",
-      "source": "isportsystem"
-    },
-    {
-      "studio_id": "pilates-place",
-      "studio_name": "Pilates Place",
-      "city": "Brno",
-      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer",
-      "class_type": "pilates",
-      "date": "2026-09-05",
-      "start_time": "16:30",
-      "end_time": "17:20",
       "instructor": "Karolína Chmelová.",
       "capacity_total": 6,
       "capacity_free": 5,
@@ -2615,7 +2599,7 @@
       "end_time": "11:20",
       "instructor": "Adéla Pazderová",
       "capacity_total": 20,
-      "capacity_free": 13,
+      "capacity_free": 12,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3751,7 +3735,7 @@
       "end_time": "10:00",
       "instructor": "Aneta Hrušková",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -5463,7 +5447,7 @@
       "end_time": "10:00",
       "instructor": "Aneta Hrušková",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -7271,7 +7255,7 @@
       "end_time": "10:00",
       "instructor": "Aneta Hrušková",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -9063,7 +9047,7 @@
       "end_time": "10:00",
       "instructor": "Aneta Hrušková",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -10023,7 +10007,7 @@
       "end_time": "17:50",
       "instructor": "Dominika Jenč.",
       "capacity_total": 6,
-      "capacity_free": 4,
+      "capacity_free": 3,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -10919,7 +10903,7 @@
       "end_time": "10:00",
       "instructor": "Aneta Hrušková",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -11767,7 +11751,7 @@
       "end_time": "17:50",
       "instructor": "Dominika Jenč.",
       "capacity_total": 6,
-      "capacity_free": 4,
+      "capacity_free": 3,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -12583,7 +12567,7 @@
       "end_time": "10:00",
       "instructor": "Aneta Hrušková",
       "capacity_total": 6,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -13367,7 +13351,7 @@
       "end_time": "17:50",
       "instructor": "Dominika Jenč.",
       "capacity_total": 6,
-      "capacity_free": 4,
+      "capacity_free": 3,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -13495,7 +13479,7 @@
       "end_time": "17:20",
       "instructor": "Dominika Jenč.",
       "capacity_total": 6,
-      "capacity_free": 5,
+      "capacity_free": 4,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },

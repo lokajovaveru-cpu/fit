@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T04:08:33.287097+00:00",
+  "generated_at": "2026-09-06T06:10:08.637973+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -15,7 +15,7 @@
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
       "website": "https://pilates-place.cz/",
-      "lessons_found": 786
+      "lessons_found": 785
     },
     {
       "id": "ystudio",
@@ -31,7 +31,7 @@
       "city": "Brno",
       "address": "Purkyňova 8, Brno",
       "website": "https://yoga-place.cz/",
-      "lessons_found": 253
+      "lessons_found": 254
     },
     {
       "id": "jogavbrne",
@@ -1031,7 +1031,7 @@
       "end_time": "16:50",
       "instructor": "Adéla Pazderová",
       "capacity_total": 20,
-      "capacity_free": 19,
+      "capacity_free": 20,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2144,22 +2144,6 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Barre",
-      "class_type": "pilates",
-      "date": "2026-09-06",
-      "start_time": "8:00",
-      "end_time": "8:50",
-      "instructor": "Tereza Provazníková",
-      "capacity_total": 17,
-      "capacity_free": 10,
-      "booking_url": "https://pilates-place.cz/",
-      "source": "isportsystem"
-    },
-    {
-      "studio_id": "pilates-place",
-      "studio_name": "Pilates Place",
-      "city": "Brno",
-      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
       "class_name": "Kurz PILATES instruktor Obsazeno 16:00–16:50 Pilates Sculpt",
       "class_type": "pilates",
       "date": "2026-09-06",
@@ -2311,7 +2295,7 @@
       "end_time": "16:50",
       "instructor": "Iveta Lethi",
       "capacity_total": 17,
-      "capacity_free": 7,
+      "capacity_free": 6,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2439,7 +2423,7 @@
       "end_time": "16:50",
       "instructor": "Iveta Lethi",
       "capacity_total": 18,
-      "capacity_free": 16,
+      "capacity_free": 15,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3991,7 +3975,7 @@
       "end_time": "16:50",
       "instructor": "Iveta Lethi",
       "capacity_total": 17,
-      "capacity_free": 7,
+      "capacity_free": 6,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -4119,7 +4103,7 @@
       "end_time": "16:50",
       "instructor": "Iveta Lethi",
       "capacity_total": 18,
-      "capacity_free": 16,
+      "capacity_free": 15,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -5863,7 +5847,7 @@
       "end_time": "16:50",
       "instructor": "Iveta Lethi",
       "capacity_total": 18,
-      "capacity_free": 16,
+      "capacity_free": 15,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -15639,7 +15623,7 @@
       "end_time": "15:30",
       "instructor": "Albi Chládková",
       "capacity_total": 18,
-      "capacity_free": 15,
+      "capacity_free": 16,
       "booking_url": "https://yoga-place.cz/",
       "source": "isportsystem"
     },
@@ -15648,11 +15632,27 @@
       "studio_name": "Yoga Place",
       "city": "Brno",
       "address": "Purkyňova 8, Brno",
-      "class_name": "Fyzio flow jóga Radka Čontošová Jen náhradníci: 0/8 18:30–19:30 Power jóga Radka Čontošová Jen náhradníci: 1/8 19:35–20:35 Večerní flow",
+      "class_name": "Fyzio flow jóga",
       "class_type": "jóga",
       "date": "2026-09-06",
       "start_time": "17:25",
       "end_time": "18:25",
+      "instructor": "Radka Čontošová",
+      "capacity_total": 18,
+      "capacity_free": 1,
+      "booking_url": "https://yoga-place.cz/",
+      "source": "isportsystem"
+    },
+    {
+      "studio_id": "yoga-place",
+      "studio_name": "Yoga Place",
+      "city": "Brno",
+      "address": "Purkyňova 8, Brno",
+      "class_name": "Power jóga Radka Čontošová Jen náhradníci: 1/8 19:35–20:35 Večerní flow",
+      "class_type": "jóga",
+      "date": "2026-09-06",
+      "start_time": "18:30",
+      "end_time": "19:30",
       "instructor": "Dominika Maloňová",
       "capacity_total": 18,
       "capacity_free": 16,
@@ -15767,7 +15767,7 @@
       "end_time": "19:30",
       "instructor": "Any Březinová",
       "capacity_total": 18,
-      "capacity_free": 11,
+      "capacity_free": 13,
       "booking_url": "https://yoga-place.cz/",
       "source": "isportsystem"
     },
@@ -15879,7 +15879,7 @@
       "end_time": "19:30",
       "instructor": "Eva Skočíková",
       "capacity_total": 18,
-      "capacity_free": 14,
+      "capacity_free": 15,
       "booking_url": "https://yoga-place.cz/",
       "source": "isportsystem"
     },
@@ -15911,7 +15911,7 @@
       "end_time": "11:00",
       "instructor": "Dominika Maloňová",
       "capacity_total": 10,
-      "capacity_free": 6,
+      "capacity_free": 4,
       "booking_url": "https://yoga-place.cz/",
       "source": "isportsystem"
     },
@@ -16263,7 +16263,7 @@
       "end_time": "19:30",
       "instructor": "Any Březinová",
       "capacity_total": 18,
-      "capacity_free": 11,
+      "capacity_free": 13,
       "booking_url": "https://yoga-place.cz/",
       "source": "isportsystem"
     },
@@ -16375,7 +16375,7 @@
       "end_time": "19:30",
       "instructor": "Eva Skočíková",
       "capacity_total": 18,
-      "capacity_free": 14,
+      "capacity_free": 15,
       "booking_url": "https://yoga-place.cz/",
       "source": "isportsystem"
     },
@@ -16823,7 +16823,7 @@
       "end_time": "19:30",
       "instructor": "Eva Skočíková",
       "capacity_total": 18,
-      "capacity_free": 14,
+      "capacity_free": 15,
       "booking_url": "https://yoga-place.cz/",
       "source": "isportsystem"
     },

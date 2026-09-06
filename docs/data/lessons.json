@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T02:08:32.507253+00:00",
+  "generated_at": "2026-09-06T04:08:33.287097+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -15,7 +15,7 @@
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
       "website": "https://pilates-place.cz/",
-      "lessons_found": 787
+      "lessons_found": 786
     },
     {
       "id": "ystudio",
@@ -999,7 +999,7 @@
       "end_time": "9:50",
       "instructor": "Romana Sedláčková",
       "capacity_total": 18,
-      "capacity_free": 9,
+      "capacity_free": 8,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2496,27 +2496,11 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer",
+      "class_name": "Pilates reformer Adéla Navrátilová. Dnes zrušeno 10:30–11:20 Pilates reformer",
       "class_type": "pilates",
       "date": "2026-09-06",
       "start_time": "9:00",
       "end_time": "9:50",
-      "instructor": "Adéla Navrátilová.",
-      "capacity_total": 6,
-      "capacity_free": 6,
-      "booking_url": "https://pilates-place.cz/",
-      "source": "isportsystem"
-    },
-    {
-      "studio_id": "pilates-place",
-      "studio_name": "Pilates Place",
-      "city": "Brno",
-      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer",
-      "class_type": "pilates",
-      "date": "2026-09-06",
-      "start_time": "10:30",
-      "end_time": "11:20",
       "instructor": "Adéla Navrátilová.",
       "capacity_total": 6,
       "capacity_free": 4,

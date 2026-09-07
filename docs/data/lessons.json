@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T02:08:29.888121+00:00",
+  "generated_at": "2026-09-07T04:08:42.751899+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -15,7 +15,7 @@
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
       "website": "https://pilates-place.cz/",
-      "lessons_found": 776
+      "lessons_found": 775
     },
     {
       "id": "ystudio",
@@ -2224,27 +2224,11 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Ranní Pilates Eliška Kudrnová Dnes zrušeno 8:30–9:20 Barre",
+      "class_name": "Ranní Pilates Eliška Kudrnová Dnes zrušeno 8:30–9:20 Barre Tereza Plachá Dnes zrušeno 10:00–10:50 Pilates",
       "class_type": "pilates",
       "date": "2026-09-07",
       "start_time": "7:00",
       "end_time": "7:50",
-      "instructor": "Tereza Plachá",
-      "capacity_total": 17,
-      "capacity_free": 17,
-      "booking_url": "https://pilates-place.cz/",
-      "source": "isportsystem"
-    },
-    {
-      "studio_id": "pilates-place",
-      "studio_name": "Pilates Place",
-      "city": "Brno",
-      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates",
-      "class_type": "pilates",
-      "date": "2026-09-07",
-      "start_time": "10:00",
-      "end_time": "10:50",
       "instructor": "Hana Abrahamová",
       "capacity_total": 18,
       "capacity_free": 10,
@@ -2295,7 +2279,7 @@
       "end_time": "16:50",
       "instructor": "Iveta Lethi",
       "capacity_total": 17,
-      "capacity_free": 5,
+      "capacity_free": 7,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2327,7 +2311,7 @@
       "end_time": "19:50",
       "instructor": "Adéla Žáková",
       "capacity_total": 18,
-      "capacity_free": 11,
+      "capacity_free": 12,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2360,6 +2344,22 @@
       "instructor": "Nela Pánková",
       "capacity_total": 17,
       "capacity_free": 17,
+      "booking_url": "https://pilates-place.cz/",
+      "source": "isportsystem"
+    },
+    {
+      "studio_id": "pilates-place",
+      "studio_name": "Pilates Place",
+      "city": "Brno",
+      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
+      "class_name": "Pilates",
+      "class_type": "pilates",
+      "date": "2026-09-07",
+      "start_time": "10:00",
+      "end_time": "10:50",
+      "instructor": "Hana Abrahamová",
+      "capacity_total": 18,
+      "capacity_free": 15,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2592,27 +2592,11 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer",
+      "class_name": "Pilates reformer Aneta Ireinová. Jen náhradníci: 0/3 8:00–8:50 Pilates reformer",
       "class_type": "pilates",
       "date": "2026-09-07",
       "start_time": "6:30",
       "end_time": "7:20",
-      "instructor": "Aneta Ireinová.",
-      "capacity_total": 6,
-      "capacity_free": 2,
-      "booking_url": "https://pilates-place.cz/",
-      "source": "isportsystem"
-    },
-    {
-      "studio_id": "pilates-place",
-      "studio_name": "Pilates Place",
-      "city": "Brno",
-      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer",
-      "class_type": "pilates",
-      "date": "2026-09-07",
-      "start_time": "8:00",
-      "end_time": "8:50",
       "instructor": "Aneta Ireinová.",
       "capacity_total": 6,
       "capacity_free": 1,
@@ -13527,7 +13511,7 @@
       "end_time": "19:05",
       "instructor": "flow Anita",
       "capacity_total": null,
-      "capacity_free": 8,
+      "capacity_free": 7,
       "booking_url": "https://ystudio.isportsystem.cz/",
       "source": "isportsystem"
     },

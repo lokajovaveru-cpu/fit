@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T02:08:55.316799+00:00",
+  "generated_at": "2026-09-10T04:09:10.360762+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -15,7 +15,7 @@
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
       "website": "https://pilates-place.cz/",
-      "lessons_found": 776
+      "lessons_found": 775
     },
     {
       "id": "ystudio",
@@ -1479,7 +1479,7 @@
       "end_time": "7:20",
       "instructor": "Aneta Ireinová",
       "capacity_total": 20,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2583,7 +2583,7 @@
       "end_time": "15:50",
       "instructor": "Adéla Žáková",
       "capacity_total": 18,
-      "capacity_free": 13,
+      "capacity_free": 14,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2599,7 +2599,7 @@
       "end_time": "16:50",
       "instructor": "Tereza Provazníková",
       "capacity_total": 18,
-      "capacity_free": 4,
+      "capacity_free": 3,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -2608,7 +2608,7 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Barre Tereza Provazníková Jen náhradníci: 1/8 19:00–19:50 Večerní Pilates",
+      "class_name": "Barre Tereza Provazníková Jen náhradníci: 2/8 19:00–19:50 Večerní Pilates",
       "class_type": "pilates",
       "date": "2026-09-10",
       "start_time": "18:00",
@@ -2784,27 +2784,11 @@
       "studio_name": "Pilates Place",
       "city": "Brno",
       "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer",
+      "class_name": "Pilates reformer Vendula Vysoudilová. Dnes zrušeno 9:30–10:20 Pilates reformer",
       "class_type": "pilates",
       "date": "2026-09-10",
       "start_time": "8:00",
       "end_time": "8:50",
-      "instructor": "Vendula Vysoudilová.",
-      "capacity_total": 6,
-      "capacity_free": 5,
-      "booking_url": "https://pilates-place.cz/",
-      "source": "isportsystem"
-    },
-    {
-      "studio_id": "pilates-place",
-      "studio_name": "Pilates Place",
-      "city": "Brno",
-      "address": "Brno-Židenice (pobočky Nová Zbrojovka, Zet.office, Titanium)",
-      "class_name": "Pilates reformer",
-      "class_type": "pilates",
-      "date": "2026-09-10",
-      "start_time": "9:30",
-      "end_time": "10:20",
       "instructor": "Vendula Vysoudilová.",
       "capacity_total": 6,
       "capacity_free": 3,
@@ -2919,7 +2903,7 @@
       "end_time": "10:20",
       "instructor": "Eliška Kudrnová.",
       "capacity_total": 6,
-      "capacity_free": 4,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3063,7 +3047,7 @@
       "end_time": "7:20",
       "instructor": "Aneta Ireinová",
       "capacity_total": 20,
-      "capacity_free": 6,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -4503,7 +4487,7 @@
       "end_time": "10:20",
       "instructor": "Eliška Kudrnová.",
       "capacity_total": 6,
-      "capacity_free": 4,
+      "capacity_free": 5,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },

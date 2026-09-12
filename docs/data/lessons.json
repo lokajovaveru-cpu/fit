@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T02:08:56.700033+00:00",
+  "generated_at": "2026-09-12T04:08:26.400299+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -1527,7 +1527,7 @@
       "end_time": "11:20",
       "instructor": "Silvie Beránková",
       "capacity_total": 18,
-      "capacity_free": 4,
+      "capacity_free": 7,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },

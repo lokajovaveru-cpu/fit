@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T00:11:42.390139+00:00",
+  "generated_at": "2026-09-15T02:10:29.818393+00:00",
   "studios": [
     {
       "id": "rehabfit",
@@ -1687,7 +1687,7 @@
       "end_time": "19:50",
       "instructor": "Adéla Pazderová",
       "capacity_total": 20,
-      "capacity_free": 14,
+      "capacity_free": 13,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
@@ -3447,7 +3447,7 @@
       "end_time": "19:50",
       "instructor": "Adéla Pazderová",
       "capacity_total": 20,
-      "capacity_free": 14,
+      "capacity_free": 13,
       "booking_url": "https://pilates-place.cz/",
       "source": "isportsystem"
     },
